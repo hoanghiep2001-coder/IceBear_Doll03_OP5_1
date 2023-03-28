@@ -3,7 +3,7 @@
   "_name": "eye",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 0.5,
+  "_duration": 1,
   "sample": 60,
   "speed": 0.5,
   "wrapMode": 22,
@@ -12,11 +12,15 @@
       "y": [
         {
           "frame": 0,
-          "value": -206.938
+          "value": 105
         },
         {
           "frame": 0.5,
-          "value": -193.026
+          "value": 115
+        },
+        {
+          "frame": 1,
+          "value": 105
         }
       ]
     }

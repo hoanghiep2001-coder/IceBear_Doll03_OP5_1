@@ -23,7 +23,7 @@ cc.Class({
   onLoad() {
     this.realWidth;
     this.realHeight;
-    this.node.on("touchmove", (e) => {
+    this.tweezers.on("touchmove", (e) => {
       this.startPos = e.touch.getLocation();
       this.tweezers.setPosition(
         this.startPos.x - cc.winSize.width / 2 - 5,
@@ -59,21 +59,20 @@ cc.Class({
     });
 
     if (cc.view.getFrameSize().width > cc.view.getFrameSize().height) {
-      this.tweezers.x = -150;
-      this.tweezers.y = 80;
-      this.tweezers.scaleX = -0.3;
+      this.tweezers.x = 150;
+      this.tweezers.y = -70;
+      this.tweezers.scaleX = 0.3;
       this.tweezers.scaleY = 0.3;
     } else {
-      this.tweezers.x = -112;
-      this.tweezers.y = 2;
-      this.tweezers.scaleX = -0.2;
+      this.tweezers.x = 100;
+      this.tweezers.y = -100;
+      this.tweezers.scaleX = 0.2;
       this.tweezers.scaleY = 0.2;
     }
   },
 
   start() {
     this.playAudio(this.bgAudio);
-
   },
 
   playAudio(audio) {
@@ -88,10 +87,10 @@ cc.Class({
     if (cc.view.getFrameSize().width > cc.view.getFrameSize().height) {
       this.character.scaleX = 0.2;
       this.character.scaleY = 0.2;
-      this.emptyNode.x = -28;
-      this.emptyNode.y = 70;
-      this.word.x = 120;
-      this.word.y = 180;
+      this.emptyNode.x = 35;
+      this.emptyNode.y = -80;
+      this.word.x = -150;
+      this.word.y = 160;
       this.realHeight = 480;
       this.realWidth =
         480 * (cc.view.getFrameSize().width / cc.view.getFrameSize().height);
@@ -100,18 +99,18 @@ cc.Class({
         this.realWidth = 370;
         this.character.scaleX = 0.16;
         this.character.scaleY = 0.16;
-        this.emptyNode.x = -22.521;
-        this.emptyNode.y = 6.751;
-        this.word.x = 95.798;
-        this.word.y = 180;
+        this.emptyNode.x = 26;
+        this.emptyNode.y = -114;
+        this.word.x = -65;
+        this.word.y = 160;
       } else {
         this.realWidth = 320;
         this.character.scaleX = 0.16;
-        this.emptyNode.x = -22.521;
-        this.emptyNode.y = 6.751;
         this.character.scaleY = 0.16;
-        this.word.x = 95.798;
-        this.word.y = 180;
+        this.emptyNode.x = 26;
+        this.emptyNode.y = -114;
+        this.word.x = -65;
+        this.word.y = 160;
       }
       this.realHeight =
         this.realWidth *
